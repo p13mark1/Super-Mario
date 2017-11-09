@@ -147,6 +147,8 @@ body {
 				player.body.velocity.y = -80;
 				game.time.events.add(Phaser.Timer.SECOND, function() {
 					goomba.kill();
+					 stompsound = game.add.audio('stomp');
+            		 		 stompsound.play();
 				});
 			} else {
 				player.frame = 6;
