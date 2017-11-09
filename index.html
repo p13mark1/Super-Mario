@@ -120,6 +120,8 @@ body {
 				if (cursors.up.isDown && player.body.onFloor()) {
 					player.body.velocity.y = -190;
 					player.animations.stop();
+                    			jump = game.add.audio('jump');
+                    			jump.play();
 				}
 
 				if (player.body.velocity.y != 0) {
@@ -133,6 +135,8 @@ body {
 
 		function coinOverlap(player, coin) {
 			coin.kill();
+			 coinSound = game.add.audio('coin');
+            		 coinSound.play();
 		}
 
 		function goombaOverlap(player, goomba) {
